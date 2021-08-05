@@ -11,7 +11,9 @@ resources:
 pool:
   vmImage: ubuntu-latest
 steps:
-- script: |
-    JsonData = $${{ convertToJson(parameters.OpenShifts2iGitHub) }}
-    echo $JsonData
-  displayName: 'Run a multi-line script'
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceName'
+    method: 'POST'
+    body: '$${{ convertToJson(parameters.OpenShifts2iGitHub) }}'
+    waitForCompletion: 'false'
