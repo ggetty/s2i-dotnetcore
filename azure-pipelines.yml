@@ -10,7 +10,7 @@ resources:
 
 pool:
   vmImage: ubuntu-latest
-  
+steps:
 - script: |
     JsonData = $${{ convertToJson(parameters) }}
     echo $JsonData
