@@ -16,6 +16,6 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    JsonData = $${{ string(parameters) }}
+    JsonData = $${{ convertToJson(parameters) }}
     echo $JsonData
   displayName: 'Run a multi-line script'
