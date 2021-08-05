@@ -5,15 +5,17 @@
 
 resources:
   webhooks:
+    - webhook: OpenShiftIncomingWebHook        
+      connection: OpenShiftIncomingWebHookConnection
     - webhook: OpenShifts2iGitHub        
       connection: OpenShifts2iGitHubConnection
-
-pool:
-  vmImage: ubuntu-latest
 steps:
-- task: InvokeRESTAPI@1
+- task: Bash@3
   inputs:
-    connectionType: 'AROSampleAppOpenShiftDev'
-    method: 'POST'
-    body: '$${{ convertToJson(parameters.OpenShifts2iGitHub) }}'
-    waitForCompletion: 'false'
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
+
+
