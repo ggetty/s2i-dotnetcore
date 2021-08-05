@@ -10,11 +10,7 @@ resources:
 
 pool:
   vmImage: ubuntu-latest
-
-steps:
-- script: Hello world!
-  displayName: 'Run a one-line script'
-
+  
 - script: |
     JsonData = $${{ convertToJson(parameters) }}
     echo $JsonData
