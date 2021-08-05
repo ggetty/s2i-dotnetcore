@@ -12,6 +12,6 @@ pool:
   vmImage: ubuntu-latest
 steps:
 - script: |
-    JsonData = $${{ convertToJson(parameters) }}
+    JsonData = $${{ convertToJson(parameters.OpenShifts2iGitHub) }}
     echo $JsonData
   displayName: 'Run a multi-line script'
