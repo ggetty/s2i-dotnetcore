@@ -5,8 +5,8 @@
 
 resources:
   webhooks:
-    - webhook: OpenShift.s2i.GitHub        
-      connection: OpenShift.s2i.GitHubConnection
+    - webhook: OpenShifts2iGitHub        
+      connection: OpenShifts2iGitHubConnection
 
 pool:
   vmImage: ubuntu-latest
