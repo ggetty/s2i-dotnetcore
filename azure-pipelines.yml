@@ -12,7 +12,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
+- script: echo "${{ parameters }}"
   displayName: 'Run a one-line script'
 
 - script: |
