@@ -13,7 +13,7 @@ pool:
 steps:
 - task: InvokeRESTAPI@1
   inputs:
-    connectionType: 'connectedServiceName'
+    connectionType: 'AROSampleAppOpenShiftDev'
     method: 'POST'
     body: '$${{ convertToJson(parameters.OpenShifts2iGitHub) }}'
     waitForCompletion: 'false'
